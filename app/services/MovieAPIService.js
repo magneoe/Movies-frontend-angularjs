@@ -1,10 +1,16 @@
 
-movieDBApp.factory('movieDataService', ($resource) => {
+movieDBApp.factory('movieDataService', ($resource, $log) => {
     return {
-        getAllMovies: () => {
+        getMovies: (params, onSuccess, onFailure) => {
             let movies = $resource('http://localhost:8082/api/movies/getAll');
 
-            return movies.get({size: 10, sort: 'title', page: 0});
+            movies.get(params).$promise.then(res => {
+                $log.info(res);
+                onSuccess(res)
+            }).catch(error => {
+                $log.warn(error);
+                onFailure(error);
+            });
         }
     }
 });

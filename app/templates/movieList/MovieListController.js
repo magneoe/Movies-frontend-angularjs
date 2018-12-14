@@ -1,13 +1,36 @@
 
 
 movieDBApp.controller('MovieListController',
-    function MovieListController($scope, movieDataService, $log) {
-        
+    function MovieListController($scope, movieDataService, $log, $routeParams, $location) {
+        $log.info($location);
+        const params = {
+            sort: $routeParams.sort || 'title',
+            page: $routeParams.page || 0,
+            size: $routeParams.size || 1,
+        };
 
-        movieDataService.getAllMovies().$promise.then(res => {
-            $log.info(res);
+        const onLoadingSuccessful = (res) => {
             $scope.movies = res;
-        }).catch(error => {
-            $log.warn(error);
-        });
+        }
+        const onLoadingFailure = (error) => {
+            $scope.message = "Unable to load movies...";
+        }
+
+        movieDataService.getMovies(params, onLoadingSuccessful, onLoadingFailure);
+
+
+        $scope.prevPage = () => {
+            $location.search({ page: $scope.movies.number-1});
+        };
+        $scope.nextPage = () => {
+            $location.search({ page: $scope.movies.number+1});
+        };
+        $scope.selectMovie = (movieId) => {
+            $location.url(`/movies/${movieId}`);
+        };
     });
+
+    
+
+    
+    

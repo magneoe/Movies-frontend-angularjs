@@ -1,19 +1,26 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+
+.listContainer {
+    display: flex; 
+    width: 100%; 
+    border: 1px solid green;
+}
+.movieTitleWrapper {
+    display: flex; 
+    flex-flow: row wrap;
+}
+.movieTileContainer {
+    border: 1px solid black; 
+    width: 300px; 
+    min-height: 350px; 
+    margin: 5px 5px 5px 5px
+}
+.movieRow {
+   
+}
+.posterImg {
+    min-width: 150px;
+    max-height: 200px;
 }
 
-
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
