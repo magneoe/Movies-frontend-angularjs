@@ -6,7 +6,7 @@ movieDBApp.controller('MovieListController',
         const params = {
             sort: $routeParams.sort || 'title',
             page: $routeParams.page || 0,
-            size: $routeParams.size || 1,
+            size: $routeParams.size || 2,
         };
 
         const onLoadingSuccessful = (res) => {

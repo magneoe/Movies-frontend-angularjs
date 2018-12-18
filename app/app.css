@@ -1,26 +1,59 @@
 /* app css stylesheet */
 
-
+body {
+    background-color: #364046;
+}
+.header {
+    background-image: url('./images/feature.jpg');
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px 10px 30px;
+}
+.headerTitle {
+    font-size: 28px;
+    color: #c6c245;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
 .listContainer {
     display: flex; 
     width: 100%; 
-    border: 1px solid green;
 }
 .movieTitleWrapper {
     display: flex; 
     flex-flow: row wrap;
 }
 .movieTileContainer {
+    flex-direction: column;
+    display: flex;
     border: 1px solid black; 
     width: 300px; 
     min-height: 350px; 
-    margin: 5px 5px 5px 5px
+    margin: 5px 5px 5px 5px;
+    padding: 15px;
+    color: #d9d9d9;
+    box-shadow: 5px 5px 4px #4d4d4d;
+    border: 1px solid #4d4d4d;
+    font-size: 12px;
 }
-.movieRow {
-   
+.movieAttributeTitle {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.attributeGridContainer {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+.attributeGridItem  {
+    text-align: left;
 }
 .posterImg {
     min-width: 150px;
     max-height: 200px;
+    align-self: center;
 }
 

@@ -4,10 +4,15 @@
 <div class="listContainer">
     <div ng-repeat="movie in movies.content" class="movieTileWrapper">
         <div class="movieTileContainer" ng-click="selectMovie(movie.id)">
-            <div><span>Title: </span><span>{{movie.title}}</span></div>
-            <div><span>Year: </span><span>{{movie.year}}</span></div>
-            <div><span>Year: </span><span>{{movie.duration}}</span></div>
-            <img class="posterImg" ng-src="{{movie.posterUrl}}" alt="Movie poster"/>
+            <img class="posterImg" ng-src="{{movie.posterUrl}}" alt="Movie poster" />
+            <div class="attributeGridContainer">
+                <div class="attributeGridItem"><span class="movieAttributeTitle">Title: </span></div>
+                <div class="attributeGridItem"><span>{{movie.title}}</span></div>
+                <div class="attributeGridItem"><span class="movieAttributeTitle">Year: </span></div>
+                <div class="attributeGridItem"><span>{{movie.year}}</span></div>
+                <div class="attributeGridItem"><span class="movieAttributeTitle">Duration: </span></div>
+                <div class="attributeGridItem"><span>{{movie.duration}}</span></div>
+            </div>
         </div>
     </div>
 </div>
