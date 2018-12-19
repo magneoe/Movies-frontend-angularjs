@@ -1,0 +1,12 @@
+<div class="commentContainer">
+    <div ng-repeat="comment in comments" class="comment">
+        <div>
+            <div class="movieAttributeTitle">Author: </div><div> {{comment.author.name}} {{comment.author.lastname}}</div>
+            <div class="movieAttributeTitle">Date: </div><div>{{comment.created}}</div>
+        </div>
+        <div >
+            <div class="movieAttributeTitle">{{comment.title}}</div>
+            <div>{{comment.comment}}</div>
+        </div>
+    </div>
+</div>

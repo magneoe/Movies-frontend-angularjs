@@ -20,17 +20,18 @@ movieDBApp.controller('MovieListController',
 
 
         $scope.prevPage = () => {
-            $location.search({ page: $scope.movies.number-1});
+            $location.search({ page: $scope.movies.number - 1 });
         };
         $scope.nextPage = () => {
-            $location.search({ page: $scope.movies.number+1});
+            $location.search({ page: $scope.movies.number + 1 });
         };
         $scope.selectMovie = (movieId) => {
-            $location.url(`/movies/${movieId}`);
+            if (movieId) {
+                $location.url(`/movies/${movieId}`);
+            }
         };
     });
 
-    
 
-    
-    
+
+

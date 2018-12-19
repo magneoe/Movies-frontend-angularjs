@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="/app.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <base href="/" />
@@ -22,7 +22,7 @@
     <span class="headerTitle">MovieDB: A slightly more serious movie database</span>
   </header>
   <ul class="menu">
-    <li><a href="#/login">Login</a></li>
+    <li><a href="/login">Login</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -39,9 +39,19 @@
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="lib/angular-resource/angular-resource.js"></script>
   <script src="app.js"></script>
-  <script src="templates/movieList/MovieListController.js"></script>
-  <script src="templates/movieTile/MovieTileController.js"></script>
+  <script src="templates/movieList/MovieList.js"></script>
+  <script src="templates/movieDetails/MovieDetails.js"></script>
+  <script src="templates/login/login.js"></script>
+
   <script src="services/MovieAPIService.js"></script>
+  <script src="services/LoginAPIService.js"></script>
+
+  <script src="directives/tile/MovieTileDirective.js"></script>
+  <script src="directives/details/MovieDetailsDirective.js"></script>
+  <script src="directives/comments/CommentDirective.js"></script>
+
+  <script src="filters/ConcatStringsFilter.js"></script>
+
   <script src="core/version/version.js"></script>
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>

@@ -9,8 +9,12 @@ config(($routeProvider, $locationProvider) => {
       controller: 'MovieListController'
   });
   $routeProvider.when('/movies/:movieId', {
-    templateUrl: '/templates/movieTile/MovieTile.html',
-    controller: 'MovieTileController'
+    templateUrl: '/templates/movieDetails/MovieDetails.html',
+    controller: 'MovieDetailsController'
+});
+$routeProvider.when('/login', {
+    templateUrl: '/templates/login/login.html',
+    controller: 'LoginController'
 });
 
   $routeProvider.otherwise({redirectTo: '/movies'});
